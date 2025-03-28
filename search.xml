@@ -20,6 +20,12 @@
 ]]></content>
   </entry>
   <entry>
+    <title>git教程</title>
+    <url>/2025/03/27/git%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>git add<br>git commit<br>git push</p>
+]]></content>
+  </entry>
+  <entry>
     <title>第一篇文章</title>
     <url>/2025/03/27/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><p>代码测试：<br>`&#96;&#96;py<br>print(“Hello”)<br>`&#96;&#96;</p>
