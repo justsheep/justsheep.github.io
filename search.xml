@@ -4,6 +4,13 @@
     <title>c hello world</title>
     <url>/2025/04/01/c%20hello%20world/</url>
     <content><![CDATA[<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello World\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 <figure class="highlight x86asm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">.LC0:</span></span><br><span class="line"><span class="meta">        .string</span> <span class="string">&quot;Hello World&quot;</span></span><br><span class="line"><span class="symbol">main:</span></span><br><span class="line">        <span class="keyword">push</span>    <span class="built_in">rbp</span></span><br><span class="line">        <span class="keyword">mov</span>     <span class="built_in">rbp</span>, <span class="built_in">rsp</span></span><br><span class="line">        <span class="keyword">mov</span>     <span class="built_in">edi</span>, OFFSET FLAT:.LC0</span><br><span class="line">        <span class="keyword">call</span>    puts</span><br><span class="line">        <span class="keyword">mov</span>     <span class="built_in">eax</span>, <span class="number">0</span></span><br><span class="line">        <span class="keyword">pop</span>     <span class="built_in">rbp</span></span><br><span class="line">        <span class="keyword">ret</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>c</category>
+      </categories>
+      <tags>
+        <tag>c</tag>
+      </tags>
   </entry>
 </search>
