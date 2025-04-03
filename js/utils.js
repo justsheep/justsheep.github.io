@@ -516,3 +516,74 @@ NexT.utils = {
     };
   }
 };
+
+// 分享到 QQ
+function shareToQQ() {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + url + '&title=' + title);
+}
+
+// 分享到微博
+function shareToWeibo() {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  window.open('https://service.weibo.com/share/share.php?url=' + url + '&title=' + title);
+}
+
+// 显示微信二维码
+function showWechatQRCode() {
+  const url = window.location.href;
+  const qr = qrcode(0, 'L');
+  qr.addData(url);
+  qr.make();
+  const qrImage = qr.createImgTag(4);
+
+  // 计算新窗口的位置
+  const left = (window.innerWidth - 300) / 2 + window.screenX;
+  const top = (window.innerHeight - 300) / 2 + window.screenY;
+
+  // 打开一个新窗口并设置位置
+  const newWindow = window.open('', '_blank', `width=300,height=300,left=${left},top=${top}`);
+
+  if (newWindow) {
+    // 设置新窗口的文档内容
+    newWindow.document.write(`
+      <html>
+        <head>
+          <title>微信分享二维码</title>
+          <style>
+            body {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column; /* 让子元素垂直排列 */
+              height: 100vh;
+              margin: 0;
+            }
+            .qr-text {
+              text-align: center; /* 文字居中 */
+              margin-top: 10px; /* 与二维码之间的间距 */
+            }
+          </style>
+        </head>
+        <body>
+          ${qrImage}
+          <div class="qr-text">请使用微信扫描二维码分享</div>
+        </body>
+      </html>
+    `);
+    newWindow.document.close();
+  }
+}
+
+// 复制链接
+function copyLink() {
+  var textArea = document.createElement("textarea");
+  textArea.value = window.location.href;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textArea);
+  alert('链接已复制');
+}
